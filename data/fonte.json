@@ -1,0 +1,54 @@
+{
+	"descripcion": "Las fuentes de las skills. La documentación oficial no tiene un repositorio público: se cita por URL de la versión Markdown de cada página, y el gate comprueba que responda 200. Los repositorios MIT se fijan en un commit y se citan por ruta.",
+	"sitios": [
+		{
+			"nombre": "nuvemshop.dev",
+			"base": "https://nuvemshop.dev/en-US/",
+			"indice": "https://nuvemshop.dev/en-US/llms.txt",
+			"consultado": "2026-11-05",
+			"licencia": "Sin licencia abierta. Las skills resumen con palabras propias y enlazan; no copian texto.",
+			"alternativas": {
+				"pt-BR": "https://nuvemshop.dev/",
+				"es": "https://tiendanube.dev/"
+			}
+		}
+	],
+	"fuentes": [
+		{
+			"repo": "nube-sdk",
+			"url": "https://github.com/TiendaNube/nube-sdk",
+			"commit": "bff8d7b0f4f7df3bef962e270c74038b1a63f7f4",
+			"licencia": "MIT"
+		},
+		{
+			"repo": "tiendanube-app-native-template-node",
+			"url": "https://github.com/TiendaNube/tiendanube-app-native-template-node",
+			"commit": "201f0ff79a7f8d7e7e477c109fd0eb8a4af4692f",
+			"licencia": "MIT"
+		},
+		{
+			"repo": "tiendanube-app-native-template-react",
+			"url": "https://github.com/TiendaNube/tiendanube-app-native-template-react",
+			"commit": "af3305c3292d53ba8810a7c434f6d2b4a1969fea",
+			"licencia": "MIT"
+		},
+		{
+			"repo": "tiendanube-app-standalone-template-node",
+			"url": "https://github.com/TiendaNube/tiendanube-app-standalone-template-node",
+			"commit": "4c881e1c5fd8b549c62eae70e1bcb3488b5c11a9",
+			"licencia": "MIT"
+		},
+		{
+			"repo": "tiendanube-app-standalone-template-react",
+			"url": "https://github.com/TiendaNube/tiendanube-app-standalone-template-react",
+			"commit": "6ff7f2648215256b29844840765881b6a765e2c0",
+			"licencia": "MIT"
+		},
+		{
+			"repo": "nimbus-design-system",
+			"url": "https://github.com/TiendaNube/nimbus-design-system",
+			"commit": "61996b1dfbfa4c774c207c745c0fe5f5fbcb59df",
+			"licencia": "MIT"
+		}
+	]
+}
