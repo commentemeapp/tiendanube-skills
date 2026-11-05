@@ -1,0 +1,49 @@
+tiendanube-skills
+Copyright (c) 2026 José Luiz Rodrigues
+
+This repository is licensed under the MIT License (see LICENSE).
+
+The skills in skills/ are original text written from the public Tiendanube /
+Nuvemshop developer documentation at https://nuvemshop.dev/en-US/ (read on
+2026-11-05). That documentation is not published under an open license: the
+skills summarize it in their own words and link to each page, and no text of it
+is copied here.
+
+Each SKILL.md ends with a "Reference" section that lists the pages it was
+written from, by the URL of their Markdown version.
+
+Some skills also cite files of these repositories, read at the commits below.
+Code examples adapted from them keep their MIT license:
+
+1. nube-sdk
+   https://github.com/TiendaNube/nube-sdk
+   Commit bff8d7b0f4f7df3bef962e270c74038b1a63f7f4
+   MIT License
+
+2. tiendanube-app-native-template-node
+   https://github.com/TiendaNube/tiendanube-app-native-template-node
+   Commit 201f0ff79a7f8d7e7e477c109fd0eb8a4af4692f
+   MIT License
+
+3. tiendanube-app-native-template-react
+   https://github.com/TiendaNube/tiendanube-app-native-template-react
+   Commit af3305c3292d53ba8810a7c434f6d2b4a1969fea
+   MIT License
+
+4. tiendanube-app-standalone-template-node
+   https://github.com/TiendaNube/tiendanube-app-standalone-template-node
+   Commit 4c881e1c5fd8b549c62eae70e1bcb3488b5c11a9
+   MIT License
+
+5. tiendanube-app-standalone-template-react
+   https://github.com/TiendaNube/tiendanube-app-standalone-template-react
+   Commit 6ff7f2648215256b29844840765881b6a765e2c0
+   MIT License
+
+6. nimbus-design-system
+   https://github.com/TiendaNube/nimbus-design-system
+   Commit 61996b1dfbfa4c774c207c745c0fe5f5fbcb59df
+   MIT License
+
+Tiendanube and Nuvemshop are trademarks of their owners. This project is not
+affiliated with, endorsed by, or sponsored by Tiendanube or Nuvemshop.
