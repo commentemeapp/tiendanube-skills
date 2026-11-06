@@ -46,6 +46,24 @@ Tiendanube publica su documentación lista para agentes, un [Admin MCP](https://
 
 ## Documentación
 
+### En cada agente
+
+Las skills siguen el estándar abierto [Agent Skills](https://agentskills.io): el mismo `SKILL.md` sirve en Claude Code, Codex, Cursor, GitHub Copilot y Gemini CLI. `npx skills add` detecta los agentes instalados; con `-a` eliges a cuales va:
+
+```bash
+npx skills add commentemeapp/tiendanube-skills -a claude-code -a codex -a cursor -a github-copilot -a gemini-cli
+```
+
+| Agente         | `-a`             | En el proyecto    | Para todos los proyectos (`-g`) |
+| -------------- | ---------------- | ----------------- | ------------------------------- |
+| Claude Code    | `claude-code`    | `.claude/skills/` | `~/.claude/skills/`             |
+| Codex          | `codex`          | `.agents/skills/` | `~/.agents/skills/`             |
+| Cursor         | `cursor`         | `.agents/skills/` | `~/.cursor/skills/`             |
+| GitHub Copilot | `github-copilot` | `.agents/skills/` | `~/.copilot/skills/`            |
+| Gemini CLI     | `gemini-cli`     | `.agents/skills/` | `~/.gemini/skills/`             |
+
+Las rutas son las del [CLI `skills`](https://github.com/vercel-labs/skills/blob/main/docs/agents.md). En todos los agentes la skill entra cuando la tarea coincide con su `description`; para forzar una, nómbrala en el pedido.
+
 ### Por que no es un plugin de Claude Code
 
 A propósito: instaladas como plugin, las skills ganan el nombre del plugin adelante, y los agentes que las precargan por nombre dejan de encontrarlas.
