@@ -1,13 +1,12 @@
-<p align="center">
-  <img src="assets/banner.png" width="100%" alt="tiendanube-skills · Diez skills de agente para Tiendanube y Nuvemshop, cada regla con su fuente oficial">
-</p>
+![tiendanube-skills · Diez skills de agente para Tiendanube y Nuvemshop, cada regla con su fuente oficial](.github/assets/banner.png)
 
 # tiendanube-skills
 
 **Diez skills de agente para desarrollar apps e integraciones en Tiendanube y Nuvemshop, cada regla con su fuente oficial.**
 
-![license](https://img.shields.io/github/license/commentemeapp/tiendanube-skills?labelColor=005278&color=FFBD38)
-![last commit](https://img.shields.io/github/last-commit/commentemeapp/tiendanube-skills?labelColor=005278&color=FFBD38)
+[![licencia](https://badgen.net/github/license/commentemeapp/tiendanube-skills?color=005278)](./LICENSE)
+[![último commit](https://badgen.net/github/last-commit/commentemeapp/tiendanube-skills/main)](https://github.com/commentemeapp/tiendanube-skills/commits/main)
+[![estrellas](https://badgen.net/github/stars/commentemeapp/tiendanube-skills)](https://github.com/commentemeapp/tiendanube-skills/stargazers)
 
 ## Instalación
 
@@ -92,7 +91,7 @@ npm ci
 npm run verificar
 ```
 
-`scripts/verificar.sh` es el gate, el mismo que corre el CI: JSON válido; el frontmatter de cada skill (`name` igual a la carpeta, kebab-case, prefijo `tiendanube-`, `description` de hasta 1024 caracteres que empieza por "Apply when", `license` y `compatibility`); las siete secciones; una sección Reference con al menos una fuente; que **cada página citada responda 200** y que **cada archivo citado exista en el commit fijado**; Prettier; `bash -n`, y una búsqueda de rastros (rutas de una máquina, correos personales, nombres de clientes, portugués). Lo que no responde se informa como "no verificado", nunca como verde (en el CI, es una falla).
+`scripts/verificar.sh` es el gate y corre en tu máquina antes de cada merge (no hay CI en GitHub): JSON válido; el frontmatter de cada skill (`name` igual a la carpeta, kebab-case, prefijo `tiendanube-`, `description` de hasta 1024 caracteres que empieza por "Apply when", `license` y `compatibility`); las siete secciones; una sección Reference con al menos una fuente; que **cada página citada responda 200** y que **cada archivo citado exista en el commit fijado**; Prettier; `bash -n`, y una búsqueda de rastros (rutas de una máquina, correos personales, nombres de clientes, portugués). Lo que no responde se informa como "no verificado", nunca como verde.
 
 Una regla nueva necesita su página en la documentación oficial: lee la página, escribe la regla y cita la página en Reference. Los cambios de cada versión están en [CHANGELOG.md](CHANGELOG.md).
 
@@ -102,6 +101,4 @@ Abre un PR contra `dev` con Conventional Commits; la promoción a `main` es merg
 
 [MIT](LICENSE). Las fuentes y sus licencias, en [NOTICE](NOTICE).
 
----
-
-Hecho por [commente.me](https://www.commente.me) · hablecon@commente.me
+_Hecho con amor y café por [zeluizr](https://github.com/zeluizr) y con la ayuda de [Claude](https://claude.ai/referral/Cz_UimA0NQ) ☕_
