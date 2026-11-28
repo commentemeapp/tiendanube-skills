@@ -4,9 +4,7 @@
 
 **Diez skills de agente para desarrollar apps e integraciones en Tiendanube y Nuvemshop, cada regla con su fuente oficial.**
 
-[![licencia](https://badgen.net/github/license/commentemeapp/tiendanube-skills?color=005278)](./LICENSE)
-[![último commit](https://badgen.net/github/last-commit/commentemeapp/tiendanube-skills/main)](https://github.com/commentemeapp/tiendanube-skills/commits/main)
-[![estrellas](https://badgen.net/github/stars/commentemeapp/tiendanube-skills)](https://github.com/commentemeapp/tiendanube-skills/stargazers)
+Sin versión publicada · en desarrollo. Cambios en [CHANGELOG.md](CHANGELOG.md).
 
 ## Instalación
 
@@ -15,35 +13,6 @@ npx skills add commentemeapp/tiendanube-skills
 ```
 
 Con el CLI de GitHub, `gh skill install commentemeapp/tiendanube-skills`. `--scope user` las deja disponibles en todos los proyectos.
-
-## Uso rápido
-
-Instaladas, el agente las carga solo cuando la tarea las pide. Por ejemplo, "registra el webhook `order/paid` y verifica la firma" activa `tiendanube-webhooks`, y "sincroniza el stock por location desde el ERP" activa `tiendanube-erp-integration`. Para forzar una, nómbrala en el pedido.
-
-## Que incluye
-
-Para apps de partners e integraciones propias: la Admin API, OAuth, webhooks, catálogo, pedidos, apps de envío y de pago, NubeSDK, apps del Admin, temas e integración con ERP.
-
-| Skill                                                                                  | Cuándo se usa                                                                                                 | Fuentes |
-| -------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------- |
-| [`tiendanube-rest-api`](skills/tiendanube-rest-api/SKILL.md)                           | La base de toda llamada: URL con versión y `store_id`, headers, errores, rate limit y paginación.             | 11      |
-| [`tiendanube-oauth-apps`](skills/tiendanube-oauth-apps/SKILL.md)                       | El app en el Partners Portal, el flujo authorization code, scopes y el token por tienda.                      | 9       |
-| [`tiendanube-webhooks`](skills/tiendanube-webhooks/SKILL.md)                           | Eventos, registro, firma HMAC, reintentos y los webhooks obligatorios de privacidad.                          | 8       |
-| [`tiendanube-catalog`](skills/tiendanube-catalog/SKILL.md)                             | Productos, variantes, imágenes, categorías, stock por location, kits, tablas de precio y custom fields.       | 19      |
-| [`tiendanube-orders-fulfillment`](skills/tiendanube-orders-fulfillment/SKILL.md)       | Pedidos y sus estados, fulfillment orders, draft orders, transacciones, disputas, facturas y etiquetas.       | 17      |
-| [`tiendanube-shipping-payment-apps`](skills/tiendanube-shipping-payment-apps/SKILL.md) | Apps de envío (carriers y callback de cotización) y de pago (payment providers, opciones y transacciones).    | 11      |
-| [`tiendanube-nube-sdk`](skills/tiendanube-nube-sdk/SKILL.md)                           | Código en el storefront y el checkout con NubeSDK: slots, componentes, eventos, state y migración de scripts. | 26      |
-| [`tiendanube-admin-apps`](skills/tiendanube-admin-apps/SKILL.md)                       | Apps dentro del Admin con Nexo y Nimbus, apps externos, templates, homologación, publicación y Billing.       | 30      |
-| [`tiendanube-themes`](skills/tiendanube-themes/SKILL.md)                               | Temas seccionables (Ipanema) y clásicos, Twig y el CLI, como complemento de las skills oficiales del CLI.     | 30      |
-| [`tiendanube-erp-integration`](skills/tiendanube-erp-integration/SKILL.md)             | Conectar ERP, OMS o WMS y migrar catálogo y clientes desde otra plataforma.                                   | 19      |
-
-La columna Fuentes cuenta las páginas y archivos que cita la sección Reference de cada skill. Las skills siguen el formato Agent Skills (`skills/<nombre>/SKILL.md`) y la misma estructura que [adobe-commerce-skills](https://github.com/commentemeapp/adobe-commerce-skills): cuándo aplica y cuándo no, reglas de decisión, restricciones con el porque, como detectarlas y un ejemplo correcto y uno incorrecto, el patrón recomendado, los errores comunes, una lista de revisión y la referencia. Están en inglés, como la documentación de donde salen. Código abierto y sin costo.
-
-## Por que existe
-
-Tiendanube publica su documentación lista para agentes, un [Admin MCP](https://nuvemshop.dev/en-US/ai-agents/admin-mcp.md) para operar la tienda conversando y las [Agent Skills del CLI](https://nuvemshop.dev/en-US/themes/developer-tools/cli/agent-skills.md) para editar temas. Nada cubría el código de quien construye sobre la plataforma: el flujo OAuth, la firma de los webhooks, el stock por location, los fulfillment orders, las apps de envío y de pago, NubeSDK o la sincronización con un ERP. Este repositorio llena ese hueco y no repite lo oficial: para operar una tienda, ocupa el Admin MCP; para editar un tema, las skills del CLI, que `tiendanube-themes` complementa.
-
-## Documentación
 
 ### En cada agente
 
@@ -63,6 +32,33 @@ npx skills add commentemeapp/tiendanube-skills -a claude-code -a codex -a cursor
 
 Las rutas son las del [CLI `skills`](https://github.com/vercel-labs/skills/blob/main/docs/agents.md). En todos los agentes la skill entra cuando la tarea coincide con su `description`; para forzar una, nómbrala en el pedido.
 
+## Uso
+
+Instaladas, el agente las carga solo cuando la tarea las pide. Por ejemplo, "registra el webhook `order/paid` y verifica la firma" activa `tiendanube-webhooks`, y "sincroniza el stock por location desde el ERP" activa `tiendanube-erp-integration`. Para forzar una, nómbrala en el pedido.
+
+### Que incluye
+
+Para apps de partners e integraciones propias: la Admin API, OAuth, webhooks, catálogo, pedidos, apps de envío y de pago, NubeSDK, apps del Admin, temas e integración con ERP.
+
+| Skill                                                                                  | Cuándo se usa                                                                                                 | Fuentes |
+| -------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------- |
+| [`tiendanube-rest-api`](skills/tiendanube-rest-api/SKILL.md)                           | La base de toda llamada: URL con versión y `store_id`, headers, errores, rate limit y paginación.             | 11      |
+| [`tiendanube-oauth-apps`](skills/tiendanube-oauth-apps/SKILL.md)                       | El app en el Partners Portal, el flujo authorization code, scopes y el token por tienda.                      | 9       |
+| [`tiendanube-webhooks`](skills/tiendanube-webhooks/SKILL.md)                           | Eventos, registro, firma HMAC, reintentos y los webhooks obligatorios de privacidad.                          | 8       |
+| [`tiendanube-catalog`](skills/tiendanube-catalog/SKILL.md)                             | Productos, variantes, imágenes, categorías, stock por location, kits, tablas de precio y custom fields.       | 19      |
+| [`tiendanube-orders-fulfillment`](skills/tiendanube-orders-fulfillment/SKILL.md)       | Pedidos y sus estados, fulfillment orders, draft orders, transacciones, disputas, facturas y etiquetas.       | 17      |
+| [`tiendanube-shipping-payment-apps`](skills/tiendanube-shipping-payment-apps/SKILL.md) | Apps de envío (carriers y callback de cotización) y de pago (payment providers, opciones y transacciones).    | 11      |
+| [`tiendanube-nube-sdk`](skills/tiendanube-nube-sdk/SKILL.md)                           | Código en el storefront y el checkout con NubeSDK: slots, componentes, eventos, state y migración de scripts. | 26      |
+| [`tiendanube-admin-apps`](skills/tiendanube-admin-apps/SKILL.md)                       | Apps dentro del Admin con Nexo y Nimbus, apps externos, templates, homologación, publicación y Billing.       | 30      |
+| [`tiendanube-themes`](skills/tiendanube-themes/SKILL.md)                               | Temas seccionables (Ipanema) y clásicos, Twig y el CLI, como complemento de las skills oficiales del CLI.     | 30      |
+| [`tiendanube-erp-integration`](skills/tiendanube-erp-integration/SKILL.md)             | Conectar ERP, OMS o WMS y migrar catálogo y clientes desde otra plataforma.                                   | 19      |
+
+La columna Fuentes cuenta las páginas y archivos que cita la sección Reference de cada skill. Las skills siguen el formato Agent Skills (`skills/<nombre>/SKILL.md`) y la misma estructura que [adobe-commerce-skills](https://github.com/commentemeapp/adobe-commerce-skills): cuándo aplica y cuándo no, reglas de decisión, restricciones con el porque, como detectarlas y un ejemplo correcto y uno incorrecto, el patrón recomendado, los errores comunes, una lista de revisión y la referencia. Están en inglés, como la documentación de donde salen. Código abierto y sin costo.
+
+### Por que existe
+
+Tiendanube publica su documentación lista para agentes, un [Admin MCP](https://nuvemshop.dev/en-US/ai-agents/admin-mcp.md) para operar la tienda conversando y las [Agent Skills del CLI](https://nuvemshop.dev/en-US/themes/developer-tools/cli/agent-skills.md) para editar temas. Nada cubría el código de quien construye sobre la plataforma: el flujo OAuth, la firma de los webhooks, el stock por location, los fulfillment orders, las apps de envío y de pago, NubeSDK o la sincronización con un ERP. Este repositorio llena ese hueco y no repite lo oficial: para operar una tienda, ocupa el Admin MCP; para editar un tema, las skills del CLI, que `tiendanube-themes` complementa.
+
 ### Por que no es un plugin de Claude Code
 
 A propósito: instaladas como plugin, las skills ganan el nombre del plugin adelante, y los agentes que las precargan por nombre dejan de encontrarlas.
@@ -80,7 +76,7 @@ Las reglas:
 
 Las atribuciones están en [NOTICE](NOTICE).
 
-### Desarrollo
+## Desarrollo
 
 Pide Node `>= 20`.
 
@@ -95,10 +91,16 @@ npm run verificar
 
 Una regla nueva necesita su página en la documentación oficial: lee la página, escribe la regla y cita la página en Reference. Los cambios de cada versión están en [CHANGELOG.md](CHANGELOG.md).
 
-## Contribuir · Licencia
+### Contribuir
 
 Abre un PR contra `dev` con Conventional Commits; la promoción a `main` es merge de la rama entera `dev`.
 
+## Licencia
+
 [MIT](LICENSE). Las fuentes y sus licencias, en [NOTICE](NOTICE).
+
+Contacto: hablecon@commente.me
+
+---
 
 _Hecho con amor y café por [zeluizr](https://github.com/zeluizr) y con la ayuda de [Claude](https://claude.ai/referral/Cz_UimA0NQ) ☕_
